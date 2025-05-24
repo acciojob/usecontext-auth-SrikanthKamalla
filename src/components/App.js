@@ -1,13 +1,16 @@
-
-import React from "react";
-import './../styles/App.css';
+import React, { createContext, useState } from "react";
+import "./../styles/App.css";
+import Context from "./Context";
+import { AuthProvider } from "./AuthContext";
 
 const App = () => {
   return (
-    <div>
-        {/* Do not remove the main div */}
-    </div>
-  )
-}
+    <AuthProvider>
+      {/* <ContextProvider> */}
+      <Context />
+      {/* </ContextProvider> */}
+    </AuthProvider>
+  );
+};
 
-export default App
+export default App;

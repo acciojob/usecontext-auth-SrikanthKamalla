@@ -1,0 +1,27 @@
+import React, { useContext } from "react";
+import { AuthContext } from "./AuthContext";
+
+const Context = () => {
+  const { isHuman, setIsHuman } = useContext(AuthContext);
+  return (
+    <div>
+      <h1>Click on the checkbox to get authenticated</h1>
+      <p>
+        {isHuman
+          ? "You  are now authenticated, you can preceed"
+          : "you are not authenticated"}
+      </p>
+      <label htmlFor="input">
+        <input
+          value={isHuman}
+          type="checkbox"
+          id="input"
+          onChange={(e) => setIsHuman(e.target.checked)}
+        />
+        I'm not a robot
+      </label>
+    </div>
+  );
+};
+
+export default Context;
