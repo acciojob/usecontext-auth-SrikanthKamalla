@@ -6,7 +6,7 @@ const Context = () => {
   return (
     <div>
       <h1>Click on the checkbox to get authenticated</h1>
-      <p>
+      <p className="authText">
         {isHuman
           ? "You  are now authenticated, you can preceed"
           : "you are not authenticated"}
