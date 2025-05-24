@@ -8,18 +8,16 @@ const Context = () => {
       <h1>Click on the checkbox to get authenticated</h1>
       <p className="authText">
         {isHuman
-          ? "You  are now authenticated, you can preceed"
+          ? "You are now authenticated, you can proceed"
           : "you are not authenticated"}
       </p>
-      <label htmlFor="input">
-        <input
-          value={isHuman}
-          type="checkbox"
-          id="input"
-          onChange={(e) => setIsHuman(e.target.checked)}
-        />
-        I'm not a robot
-      </label>
+      <input
+        value={isHuman}
+        type="checkbox"
+        id="input"
+        onChange={(e) => setIsHuman(e.target.checked)}
+      />
+      <label htmlFor="input">I'm not a robot</label>
     </div>
   );
 };
